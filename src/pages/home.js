@@ -4,7 +4,8 @@ import {
   StyleSheet,
   TextInput,
   FlatList,
-  Image
+  Image,
+  Button
 } from 'react-native'
 import { ScrollView } from 'react-native'
 import { Feather, Ionicons } from '@expo/vector-icons'
@@ -79,14 +80,14 @@ export default function Home() {
       </ScrollView>
 
       <View>
-        <Text style={styles.title}>Você também pode visitar</Text>
+        <Text style={styles.title}>Recomendado</Text>
       </View>
 
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         <Indication />
       </ScrollView>
       <View>
-        <Text style={styles.title}>Recomendado</Text>
+        <Text style={styles.title}>Você também pode visitar</Text>
       </View>
       <ScrollView horizontal showsHorizontalScrollIndicator>
         <Recomendado />

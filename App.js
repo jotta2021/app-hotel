@@ -6,8 +6,9 @@ import {
   Montserrat_500Medium,
   Montserrat_700Bold
 } from '@expo-google-fonts/montserrat'
-import { AppLoading } from 'expo'
+
 import Routes from './src/routes'
+import Initial from './src/pages/initial'
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -18,7 +19,8 @@ export default function App() {
 
   return (
     <>
-      <StatusBar style="light" backgroundColor="black" translucent="false" />
+      <StatusBar style="auto" />
+
       <Routes />
     </>
   )

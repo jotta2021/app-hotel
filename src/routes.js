@@ -5,13 +5,19 @@ import Home from './pages/home'
 import { Feather } from '@expo/vector-icons'
 import { TouchableOpacity } from 'react-native'
 import Details from './pages/details'
-
+import Initial from './pages/initial'
+import Register from './pages/register'
 const Stack = createNativeStackNavigator()
 
 function Routes() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        <Stack.Screen
+          name="initial"
+          component={Initial}
+          options={{ headerShown: false }}
+        />
         <Stack.Screen
           name="home"
           component={Home}
@@ -45,6 +51,12 @@ function Routes() {
               </TouchableOpacity>
             )
           }}
+        />
+
+        <Stack.Screen
+          name="register"
+          component={Register}
+          options={{ headerShown: false }}
         />
       </Stack.Navigator>
     </NavigationContainer>
