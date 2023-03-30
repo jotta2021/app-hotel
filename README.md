@@ -1,5 +1,5 @@
 # app-hotel
-O aplicativo Reserve já surgiu através de um projeto para UFAL, onde tive a ideia de criar um app onde as pessoas que chegassem a Penedo pudessem fazer reservas em hotéis da cidade,mas que além disso também pode ter acesso a diversos pontos turisticos da cidade e locais para lazer.
+O aplicativo 'Reserve já surgiu' através de um projeto para UFAL, onde tive a ideia de criar um app onde as pessoas que chegassem a Penedo pudessem fazer reservas em hotéis da cidade,mas que além disso também podessem ter acesso a diversos pontos turisticos da cidade e locais para lazer.
 
 ![ab7f835b-8d69-4b3a-a771-fb474c1071fc](https://user-images.githubusercontent.com/89715505/228694524-5742e5fb-fdfc-4751-bba5-2884f672b354.jpg)
 ![7a61b568-911f-4d6f-954a-13151bb4ce4d](https://user-images.githubusercontent.com/89715505/228694688-ee519813-9c02-48c3-ae02-31e7b6edcff7.jpg)
