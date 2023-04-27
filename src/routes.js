@@ -7,6 +7,7 @@ import { TouchableOpacity } from 'react-native'
 import Details from './pages/details'
 import Initial from './pages/initial'
 import Register from './pages/register'
+import Login from './pages/login'
 const Stack = createNativeStackNavigator()
 
 function Routes() {
@@ -18,6 +19,12 @@ function Routes() {
           component={Initial}
           options={{ headerShown: false }}
         />
+        <Stack.Screen
+          name="login"
+          component={Login}
+          options={{ headerShown: false }}
+        />
+
         <Stack.Screen
           name="home"
           component={Home}

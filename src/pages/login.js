@@ -18,8 +18,15 @@ import { useNavigation } from '@react-navigation/native'
 export default function Register() {
   const Navigator = useNavigation()
 
-  const [email, setEmail] = useState('')
-  const [senha, setSenha] = useState('')
+  const [email, setEmail] = useState([])
+  const [senha, setSenha] = useState([])
+  function Autentication() {
+    if ((email !== '') & (senha !== '')) {
+      Navigator.navigate('home')
+    } else {
+      alert('preencha os campos vazios')
+    }
+  }
   return (
     <View style={styles.container}>
       <View style={styles.imageContain}>
@@ -30,14 +37,9 @@ export default function Register() {
         />
       </View>
       <Animatable.View style={styles.form} animation="fadeInUp" delay={600}>
-        <Text style={styles.title}>Crie sua conta</Text>
+        <Text style={styles.title}>Login</Text>
 
         <View style={styles.spaceTextInput}>
-          <TextInput
-            style={styles.textInput}
-            placeholder="Nome"
-            keyboardType="text"
-          />
           <TextInput
             style={styles.textInput}
             value={email}
@@ -53,8 +55,9 @@ export default function Register() {
             keyboardType="text"
           />
           <TouchableOpacity>
-            <View style={styles.button}>
+            <View on style={styles.button}>
               <Text
+                onPress={Autentication}
                 style={{
                   color: 'white',
                   fontSize: 20,
@@ -63,7 +66,7 @@ export default function Register() {
                   alignItems: 'center'
                 }}
               >
-                Criar conta
+                Entrar
               </Text>
             </View>
           </TouchableOpacity>

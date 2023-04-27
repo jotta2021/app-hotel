@@ -41,7 +41,7 @@ export default function Initial() {
           <View style={styles.buttonText}>
             <Text
               style={styles.button}
-              onPress={() => Navigation.navigate('home')}
+              onPress={() => Navigation.navigate('login')}
             >
               Acessar
             </Text>
@@ -93,6 +93,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Montserrat_500Medium',
     textAlign: 'center',
     alignItems: 'center',
+    justifyContent: 'center',
     marginTop: 2
   }
 })
