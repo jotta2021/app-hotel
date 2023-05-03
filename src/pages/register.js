@@ -18,8 +18,8 @@ import { useNavigation } from '@react-navigation/native'
 export default function Register() {
   const Navigator = useNavigation()
 
-  const [email, setEmail] = useState('')
-  const [senha, setSenha] = useState('')
+  const [user, setUser] = useState('')
+  const [password, setPassword] = useState('')
   return (
     <View style={styles.container}>
       <View style={styles.imageContain}>
@@ -40,15 +40,16 @@ export default function Register() {
           />
           <TextInput
             style={styles.textInput}
-            value={email}
-            onChange={e => setEmail(e.target.value)}
+            value={user}
+            onChange={setUser}
             placeholder="Email"
             keyboardType="email-address"
           />
           <TextInput
             style={styles.textInput}
-            value={senha}
-            onChange={e => setSenha(e.target.value)}
+            value={password}
+            onChange={setPassword}
+            secureTextEntry={true}
             placeholder="Senha"
             keyboardType="text"
           />
@@ -85,12 +86,17 @@ export default function Register() {
               <TouchableOpacity>
                 <View
                   style={{
-                    width: 50,
+                    width: 100,
                     height: 50,
+
                     borderRadius: 30,
                     alignItems: 'center',
                     justifyContent: 'center',
-                    backgroundColor: 'white'
+                    backgroundColor: 'white',
+                    shadowColor: '#171717',
+                    shadowOffset: { width: 0, height: 1 },
+                    shadowOpacity: 0.2,
+                    shadowRadius: 3
                   }}
                 >
                   <AntDesign name="google" size={40} color="#DB4437" />
@@ -98,7 +104,21 @@ export default function Register() {
               </TouchableOpacity>
 
               <TouchableOpacity>
-                <View style={styles.backshop}>
+                <View
+                  style={{
+                    width: 100,
+                    height: 50,
+
+                    borderRadius: 30,
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    backgroundColor: 'white',
+                    shadowColor: '#171717',
+                    shadowOffset: { width: 0, height: 1 },
+                    shadowOpacity: 0.2,
+                    shadowRadius: 3
+                  }}
+                >
                   <AntDesign name="apple1" size={40} color="black" />
                 </View>
               </TouchableOpacity>
@@ -135,7 +155,8 @@ const styles = StyleSheet.create({
     gap: 25
   },
   textInput: {
-    backgroundColor: '#DCDCDC',
+    borderBottomColor: 'grey',
+    borderBottomWidth: 0.5,
     width: 350,
     height: 50,
     borderRadius: 15,
@@ -152,9 +173,9 @@ const styles = StyleSheet.create({
   button: {
     backgroundColor: '#4073C8',
     color: 'white',
-    width: 250,
+    width: 350,
     height: 40,
-    borderRadius: 20,
+    borderRadius: 10,
     justifyContent: 'center'
   },
   shop: {
